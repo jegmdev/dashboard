@@ -1,14 +1,56 @@
+/* Contenedor del sidebar */
 .sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 250px;
   background-color: #343a40;
   color: white;
-  height: 100vh;
-  position: fixed;
-  padding: 10px;
+  padding: 20px;
+  transition: transform 0.3s ease; /* Animación para mostrar/ocultar */
+  z-index: 1040;
+  transform: translateX(-100%); /* Por defecto, oculto */
 }
-.sidebar a {
+
+.sidebar.open {
+  transform: translateX(0); /* Mostrar el sidebar */
+}
+
+/* Lista de navegación */
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
   color: white;
   text-decoration: none;
 }
-.sidebar a:hover {
-  color: #17a2b8;
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Botón hamburguesa */
+.hamburger-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #343a40;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  z-index: 1050;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hamburger-btn:hover {
+  background-color: #495057;
 }

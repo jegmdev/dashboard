@@ -1,22 +1,41 @@
 import React from 'react';
+import './Profile.css'; // Importar estilos
 
 const Profile = () => {
   const user = {
-    name: 'John Doe',
+    name: 'Juan Garcés',
     role: 'Administrador',
-    profilePicture: 'https://via.placeholder.com/150', // URL de imagen de perfil
+    profilePicture: 'https://i.ibb.co/PGQxtXn/CV-Profile.jpg',
+    phone: '3017606255',
+    portfolio: 'https://juangarces.info/',
+    github: 'https://github.com/jegmdev',
   };
 
   return (
-    <div className="profile-container text-center mt-4">
+    <div className="profile-container">
       <img
         src={user.profilePicture}
         alt="Foto de Perfil"
-        className="rounded-circle mb-3"
+        className="rounded-circle"
         style={{ width: '150px', height: '150px' }}
       />
       <h3>{user.name}</h3>
-      <p className="text-muted">{user.role}</p>
+      <p>{user.role}</p>
+      <div className="contact-info">
+        <p><strong>Teléfono:</strong> {user.phone}</p>
+        <p>
+          <strong>Portafolio:</strong>{' '}
+          <a href={user.portfolio} target="_blank" rel="noopener noreferrer">
+            {user.portfolio}
+          </a>
+        </p>
+        <p>
+          <strong>GitHub:</strong>{' '}
+          <a href={user.github} target="_blank" rel="noopener noreferrer">
+            {user.github}
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

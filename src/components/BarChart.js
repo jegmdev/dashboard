@@ -9,8 +9,8 @@ import {
   Tooltip,
   Legend
 } from 'chart.js';
+import './BarChart.css'; // Importa el archivo CSS
 
-// Registrar los componentes
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const BarChart = () => {
@@ -25,7 +25,11 @@ const BarChart = () => {
     ],
   };
 
-  return <Bar data={data} />;
+  return (
+    <div className="chart-container">
+      <Bar data={data} />
+    </div>
+  );
 };
 
 export default BarChart;

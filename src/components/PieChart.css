@@ -1,0 +1,30 @@
+.pie-chart-container {
+    position: relative;
+    width: 90%; /* Adapta el ancho al 90% del contenedor padre */
+    max-width: 600px; /* Ancho máximo para pantallas grandes */
+    margin: 0 auto; /* Centra el gráfico */
+    height: auto; /* Ajusta la altura automáticamente */
+    overflow: hidden; /* Evita el desbordamiento */
+  }
+  
+  /* Pantallas grandes (escritorio) */
+  @media (min-width: 1024px) {
+    .pie-chart-container {
+      height: 400px; /* Mayor altura para escritorio */
+    }
+  }
+  
+  /* Pantallas medianas (tabletas) */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    .pie-chart-container {
+      height: 350px; /* Altura media en tabletas */
+    }
+  }
+  
+  /* Pantallas pequeñas (móviles) */
+  @media (max-width: 767px) {
+    .pie-chart-container {
+      height: 300px; /* Altura menor para móviles */
+    }
+  }
+  

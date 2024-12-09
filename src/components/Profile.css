@@ -1,0 +1,43 @@
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-container img {
+  border: 3px solid #007bff;
+  object-fit: cover;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.profile-container h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+  color: #343a40;
+}
+
+.profile-container p {
+  font-size: 1rem;
+  color: #6c757d;
+}
+
+.contact-info p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.contact-info a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}

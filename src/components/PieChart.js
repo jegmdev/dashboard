@@ -6,6 +6,7 @@ import {
   Tooltip,
   Legend
 } from 'chart.js';
+import './PieChart.css'; // Importar el archivo CSS
 
 // Registrar los componentes
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -21,7 +22,11 @@ const PieChart = () => {
     ],
   };
 
-  return <Pie data={data} />;
+  return (
+    <div className="pie-chart-container">
+      <Pie data={data} />
+    </div>
+  );
 };
 
 export default PieChart;

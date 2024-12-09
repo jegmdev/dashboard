@@ -5,35 +5,9 @@ import BarChart from './components/BarChart';
 import PieChart from './components/PieChart';
 import UserTable from './components/UserTable';
 import Profile from './components/Profile';
-
-const Dashboard = () => (
-  <div>
-    <div className="row">
-      <div className="col-md-6">
-        <BarChart />
-      </div>
-      <div className="col-md-6">
-        <PieChart />
-      </div>
-    </div>
-    <div className="mt-4">
-      <UserTable />
-    </div>
-  </div>
-);
-
-const Reports = () => (
-  <div>
-    <div className="row">
-      <div className="col-md-6">
-        <PieChart />
-      </div>
-    </div>
-    <div className="mt-4">
-      <UserTable />
-    </div>
-  </div>
-);
+import Dashboard from './components/Dashboard';
+import Reports from './components/Reports';
+import './App.css'; // Importar el archivo CSS global
 
 const App = () => {
   return (
@@ -46,7 +20,7 @@ const App = () => {
               <Route path="/dashboard" element={<Dashboard />} />
               <Route path="/reports" element={<Reports />} />
               <Route path="/profile" element={<Profile />} />
-              <Route path="/" element={<Dashboard />} /> {/* Redirigir a Dashboard */}
+              <Route path="/" element={<Dashboard />} />
             </Routes>
           </div>
         </div>
