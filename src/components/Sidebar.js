@@ -1,5 +1,5 @@
 import React from 'react';
-import './Sidebar.css';
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
   return (
@@ -7,13 +7,13 @@ const Sidebar = () => {
       <h3 className="p-3">Menú</h3>
       <ul className="nav flex-column">
         <li className="nav-item">
-          <a className="nav-link text-white" href="#">Dashboard</a>
+          <Link to="/dashboard" className="nav-link text-white">Dashboard</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white" href="#">Reportes</a>
+          <Link to="/reports" className="nav-link text-white">Reportes</Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link text-white" href="#">Perfil</a>
+          <Link to="/profile" className="nav-link text-white">Perfil</Link>
         </li>
       </ul>
     </div>
