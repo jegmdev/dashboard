@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.main-content {
+  flex-grow: 1;
+}
+
+.sidebar {
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+}
+
+.container {
+  margin-left: 260px;
+}

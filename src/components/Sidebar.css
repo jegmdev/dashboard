@@ -1,0 +1,14 @@
+.sidebar {
+  background-color: #343a40;
+  color: white;
+  height: 100vh;
+  position: fixed;
+  padding: 10px;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+.sidebar a:hover {
+  color: #17a2b8;
+}
