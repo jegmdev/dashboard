@@ -1,18 +1,71 @@
-.dashboard-container {
-    display: flex;
-    flex-direction: column; /* Los elementos estarán uno debajo del otro */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    margin: 0 auto; /* Centra los elementos en el contenedor */
-    padding: 20px; /* Espaciado interno */
-    gap: 20px; /* Espacio entre los elementos */
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-header {
+  text-align: left;
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #1e1e2f;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  color: #fff;
+}
+
+.card-header {
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 10px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Especificación para diferentes tamaños de tarjetas */
+.card.large {
+  grid-column: span 2;
+}
+
+.card.full {
+  grid-column: span 3;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+  .dashboard-content {
+    grid-template-columns: 1fr; /* Una sola columna */
   }
-  
-  .dashboard-item {
-    width: 100%; /* Asegura que cada elemento ocupe el ancho completo */
-    background-color: #ffffff; /* Fondo blanco para cada sección */
-    border: 1px solid #dee2e6; /* Borde ligero para separación */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 20px; /* Espaciado interno para cada elemento */
+
+  .card.large, .card.full {
+    grid-column: span 1; /* Ocupan todo el ancho */
   }
-  
+}
+
+/* Para pantallas medianas */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .dashboard-content {
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+  }
+
+  .card.large {
+    grid-column: span 2; /* Ocupan todo el ancho */
+  }
+
+  .card.full {
+    grid-column: span 2; /* Ajusta a dos columnas */
+  }
+}

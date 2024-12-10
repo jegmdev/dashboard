@@ -5,13 +5,15 @@ import './Reports.css';
 
 const Reports = () => {
   return (
-    <div className="container-fluid">
-      <h3 className="mb-4 text-center">Reports</h3>
-      <div className="row">
-        <div className="col-12 mb-4">
+    <div className="reports-container">
+      <h3 className="reports-title">Reports</h3>
+      <div className="reports-grid">
+        <div className="report-card">
+          <h5 className="card-title">Sales Distribution</h5>
           <PieChart />
         </div>
-        <div className="col-12 mb-4">
+        <div className="report-card">
+          <h5 className="card-title">User Table</h5>
           <UserTable />
         </div>
       </div>

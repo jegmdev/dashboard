@@ -1,43 +1,99 @@
+/* Contenedor principal */
 .profile-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  height: 100vh;
-  width: 100%;
-  background-color: #f8f9fa;
-  padding: 20px;
+  align-items: center;
+}
+
+/* Tarjeta del perfil */
+.profile-card {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  max-width: 400px;
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.profile-container img {
-  border: 3px solid #007bff;
+.profile-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Foto de perfil */
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
 }
 
-.profile-container h3 {
-  margin-top: 15px;
-  font-size: 1.5rem;
+/* Nombre del perfil */
+.profile-name {
+  font-size: 1.8rem;
   color: #343a40;
+  margin: 10px 0;
 }
 
-.profile-container p {
-  font-size: 1rem;
+/* Rol del usuario */
+.profile-role {
+  font-size: 1.2rem;
   color: #6c757d;
+  margin-bottom: 20px;
 }
 
-.contact-info p {
-  margin: 5px 0;
-  font-size: 0.9rem;
+/* Información de contacto */
+.contact-info {
+  font-size: 1rem;
+  color: #495057;
+  line-height: 1.5;
 }
 
 .contact-info a {
   color: #007bff;
   text-decoration: none;
+  transition: color 0.2s ease;
 }
 
 .contact-info a:hover {
-  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Media Queries Responsivos */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .profile-card {
+    padding: 20px;
+  }
+
+  .profile-name {
+    font-size: 1.5rem;
+  }
+
+  .profile-role {
+    font-size: 1rem;
+  }
+
+  .contact-info {
+    font-size: 0.9rem;
+  }
+}
+
+/* Tabletas y pantallas medianas */
+@media (min-width: 577px) and (max-width: 1024px) {
+  .profile-card {
+    padding: 25px;
+  }
+
+  .profile-name {
+    font-size: 1.6rem;
+  }
+
+  .profile-role {
+    font-size: 1.1rem;
+  }
 }

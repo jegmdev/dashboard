@@ -13,17 +13,11 @@ const Sidebar = () => {
 
   return (
     <div>
-      {/* Botón hamburguesa / cierre */}
+      {/* Botón hamburguesa */}
       <button
         className="hamburger-btn"
         onClick={toggleSidebar}
-        style={{
-          position: 'absolute',
-          top: '15px',
-          left: isOpen ? 'calc(250px - 45px)' : '15px', // Dinámico según el estado
-          transition: 'left 0.3s ease',
-          zIndex: 1050,
-        }}
+        aria-label={isOpen ? 'Cerrar menú' : 'Abrir menú'}
       >
         <FontAwesomeIcon icon={isOpen ? faTimes : faBars} size="lg" />
       </button>
@@ -43,6 +37,9 @@ const Sidebar = () => {
           </li>
         </ul>
       </div>
+
+      {/* Overlay para cerrar el menú al hacer clic fuera */}
+      {isOpen && <div className="overlay" onClick={toggleSidebar}></div>}
     </div>
   );
 };

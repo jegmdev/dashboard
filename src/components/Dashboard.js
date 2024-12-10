@@ -1,20 +1,41 @@
 import React from 'react';
-import BarChart from './BarChart'; // Asegúrate de que las rutas sean correctas
+import BarChart from './BarChart';
 import PieChart from './PieChart';
 import UserTable from './UserTable';
-import './Dashboard.css'; // Estilos específicos del Dashboard
+import './Dashboard.css';
 
 const Dashboard = () => {
   return (
-    <div className="dashboard-container">
-      <div className="dashboard-item">
-        <BarChart />
+    <div className="dashboard">
+      <div className="dashboard-header">
+        <h1>Overview</h1>
       </div>
-      <div className="dashboard-item">
-        <PieChart />
-      </div>
-      <div className="dashboard-item">
-        <UserTable />
+      <div className="dashboard-content">
+        <div className="card large">
+          <div className="card-header">
+            <h3>Profit</h3>
+          </div>
+          <div className="card-body">
+            <h2>$12,895.5</h2>
+            <BarChart />
+          </div>
+        </div>
+        <div className="card medium">
+          <div className="card-header">
+            <h3>Sales Report</h3>
+          </div>
+          <div className="card-body">
+            <PieChart />
+          </div>
+        </div>
+        <div className="card full">
+          <div className="card-header">
+            <h3>Invoices</h3>
+          </div>
+          <div className="card-body">
+            <UserTable />
+          </div>
+        </div>
       </div>
     </div>
   );

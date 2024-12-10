@@ -1,56 +1,74 @@
-/* Contenedor del sidebar */
+/* General */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Botón hamburguesa */
+.hamburger-btn {
+  background-color: #1e1e2f;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  z-index: 1050;
+  cursor: pointer;
+}
+
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100%;
+  left: -250px; /* Inicialmente oculto */
   width: 250px;
-  background-color: #343a40;
-  color: white;
+  height: 100vh;
+  background-color: #1e1e2f;
+  color: #f5f5f5;
   padding: 20px;
-  transition: transform 0.3s ease; /* Animación para mostrar/ocultar */
-  z-index: 1040;
-  transform: translateX(-100%); /* Por defecto, oculto */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: left 0.3s ease;
+  z-index: 1100;
 }
 
 .sidebar.open {
-  transform: translateX(0); /* Mostrar el sidebar */
+  left: 0; /* Visible cuando está abierto */
 }
 
-/* Lista de navegación */
+.sidebar h3 {
+  margin-top: 0;
+  color: #ff8c42;
+}
+
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
 
 .sidebar ul li {
-  margin: 15px 0;
+  margin-bottom: 15px;
 }
 
 .sidebar ul li a {
-  color: white;
+  color: #f5f5f5;
   text-decoration: none;
+  font-size: 1rem;
+  display: block;
 }
 
 .sidebar ul li a:hover {
-  text-decoration: underline;
+  color: #ff8c42;
 }
 
-/* Botón hamburguesa */
-.hamburger-btn {
+/* Overlay */
+.overlay {
   position: fixed;
-  top: 15px;
-  left: 15px;
-  background-color: #343a40;
-  border: none;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1050;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.hamburger-btn:hover {
-  background-color: #495057;
 }

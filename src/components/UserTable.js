@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import './UserTable.css'; // Importar estilos
 
 const UserTable = () => {
   const [users, setUsers] = useState([]);

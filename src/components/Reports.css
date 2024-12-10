@@ -1,17 +1,100 @@
-.container-fluid {
-    padding: 20px;
+/* Contenedor principal */
+.reports-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Título */
+.reports-title {
+  text-align: left;
+}
+
+/* Grid para las tarjetas */
+.reports-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Tarjetas individuales */
+.report-card {
+  background: #ffffff;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.report-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Título dentro de las tarjetas */
+.card-title {
+  font-size: 1.4rem;
+  color: #495057;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 576px) {
+  .reports-container {
+    padding: 10px;
   }
-  
-  h3 {
+
+  .reports-title {
     font-size: 1.5rem;
-    color: #495057;
   }
-  
-  .row > div {
-    background-color: #ffffff; /* Fondo blanco para cada sección */
-    border: 1px solid #dee2e6; /* Borde ligero */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+
+  .reports-grid {
+    gap: 15px;
+  }
+
+  .report-card {
+    padding: 15px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Pantallas medianas (tabletas verticales) */
+@media (min-width: 577px) and (max-width: 768px) {
+  .reports-title {
+    font-size: 1.6rem;
+  }
+
+  .reports-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste más compacto */
+    gap: 20px;
+  }
+
+  .report-card {
     padding: 20px;
   }
-  
+}
+
+/* Pantallas grandes (tabletas horizontales y escritorio) */
+@media (min-width: 769px) {
+  .reports-title {
+    font-size: 1.8rem;
+  }
+
+  .reports-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .report-card {
+    padding: 25px;
+  }
+}

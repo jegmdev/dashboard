@@ -1,0 +1,35 @@
+/* Navbar general */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #1e1e2f; /* Color oscuro */
+  display: flex;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Logo centrado */
+.navbar-logo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.navbar-logo img {
+  height: 40px; /* Ajusta el tamaño del logo */
+  max-width: 100%;
+  object-fit: contain;
+}
+
+/* Ajuste para incluir espacio reservado para el botón hamburguesa */
+@media (max-width: 768px) {
+  .navbar {
+    padding-left: 60px; /* Espacio para el botón hamburguesa */
+  }
+}
